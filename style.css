@@ -1,0 +1,104 @@
+body {
+    font-family: 'Baloo 2', cursive; /* Set the default to 'Baloo 2' with a curse fallback */
+    background: #ffabab; /* Set the background color of the page to light pink */
+    margin: 0; /* Remove the default outer margin */
+    padding: 0; /* Remove the default inner padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Fix the navigation bar at the top of the page */
+.nav {
+    position: fixed; /* Fix the navigation bar to the top of the page */
+    top: 0; /* Position the navigation bar at the very top */
+    width: 100%; /* Make the navigation bar span the full width of the page */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Horizontally center the content */
+    padding: 15px; /* Set inner padding for the navigation bar */
+    background: #ffe6b3; /* Set the background color to light yellow */
+    z-index: 1000; /* Ensure the navigation bar stays on top of all other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect to the navigation bar */
+}
+
+.nav a {
+    color: #fff; /* Set the link text color to white */
+    text-decoration: none; /* Remove the underline from the links */
+    padding: 10px 20px; /* Set inner padding for the links */
+    margin: 0 10px; /* Set spacing between links */
+    background-color: #f67280; /* Set the background color of the links to deep pink */
+    border-radius: 20px; /* Round the corners of the links */
+    font-size: 1.2rem; /* Set the font size of the links */
+    transition: transform 0.3s ease-in-out; /* Add a smooth animation for size changes */
+}
+
+.nav a:hover {
+    transform: scale(1.1); /* Enlarge the link when hovered */
+    background-color: #ff8c94; /* Change the background color on hover */
+}
+
+/* Keep the header's background consistent with the body */
+.header {
+    text-align: center; /* Align text to the center */
+    background-color: #ffabab; /* Set the background color to light pink */
+    padding: 100px 20px 20px; /* Adjust the top and side padding */
+    margin-top: 80px; /* Ensure content is not covered by the fixed navigation bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Move the title upward by 10px */
+.header h1 {
+    color: #fff; /* Set the title text color to white */
+    font-size: 3rem; /* Set the font size of the title */
+    text-shadow: 2px 2px #ff6f6f; /* Add a text shadow to the title */
+    margin-top: -55px; /* Move the title upwards using a negative margin */
+}
+
+/* Keep the main content background consistent with the body */
+.main {
+    text-align: center; /* Align text to the center */
+    padding: 30px 20px; /* Set inner padding for the content */
+    background-color: #ffabab; /* Set the background color to light pink */
+    margin-top: -30px; /* Make the content more compact */
+}
+
+.main img {
+    width: 800px; /* Set the image width to 800 pixels */
+    animation: bounce 2s infinite; /* Add a bouncing animation to the image, looping infinitely */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Keep the image in its original position at the start and end */
+    }
+    50% {
+        transform: translateY(-20px); /* Move the image upward by 20 pixels at the midpoint */
+    }
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0); /* Keep the position unchanged at the start and end */
+    }
+    50% {
+        transform: translateY(-20px); /* Jump 20 pixels upward at the midpoint */
+    }
+}
+
+.jump-effect {
+    animation: jump 2s ease-in-out infinite; /* Add a smooth jumping animation, looping continuously */
+}
+
+.characters-gallery {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the content horizontally */
+    gap: 20px; /* Set spacing between images */
+    margin-top: 20px; /* Set spacing above the gallery */
+    flex-wrap: wrap; /* Allow content to wrap onto the next line on smaller screens */
+}
+
+.character-img {
+    width: calc((100% - 40px) / 3); /* Set each image to take 1/3 of the page width while considering spacing */
+    max-width: 200px; /* Limit the maximum width of images to 200 pixels */
+    height: auto; /* Preserve the aspect ratio of images */
+    border-radius: 10px; /* Add rounded corners to the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect to the images */
+}
